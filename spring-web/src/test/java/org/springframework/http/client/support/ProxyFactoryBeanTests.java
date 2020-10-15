@@ -21,6 +21,7 @@ import java.net.Proxy;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.aop.framework.ProxyFactory;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;
@@ -67,6 +68,7 @@ public class ProxyFactoryBeanTests {
 		int port = 8080;
 		factoryBean.setPort(port);
 		factoryBean.afterPropertiesSet();
+
 
 		Proxy result = factoryBean.getObject();
 
